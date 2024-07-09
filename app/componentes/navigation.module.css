@@ -1,0 +1,15 @@
+.header{
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 8px;
+}
+.navigation{
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.navigation a:hover{
+  color: bisque;
+  text-decoration: overline underline;
+}

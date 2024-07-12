@@ -84,8 +84,11 @@ body {
 }
 
 body {
-  padding: 100px;
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  padding:  100px;
+  margin: auto;
+  max-width: 1200px;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,

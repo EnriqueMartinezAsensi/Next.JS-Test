@@ -15,19 +15,26 @@ const post = async({params}) => {
 
   return (<ul style={{
     fontSize: "12",
-    background: "#222",
-    padding: "10px 40px",
-    borderRadius:"5px"
+    
   }}>
       {comments.map((coment) => (
-        <li key={coment.id} style={{display: "flex", margin: "15px"}}>
+        <li key={coment.id} style={{
+          display: "flex", 
+          margin: "15px", 
+          background: "#222", 
+          borderRadius:"5px",
+          padding: "10px 40px"
+          }}>
           <Image 
               src={`https://api.dicebear.com/9.x/avataaars/svg?seed=${coment.email}`}
               width={150}
               height={150}
               alt={coment.name}>
           </Image>
-          <small>{`${coment.body}. by: ${coment.email}`}</small>
+          <div style={{display: "flex", flexDirection: "column"}}>
+            <p>{coment.email}</p>
+            <small>{coment.body}</small>
+          </div>
         </li>
       ))}
     </ul>
